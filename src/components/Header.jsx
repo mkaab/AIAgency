@@ -78,7 +78,7 @@ export default function Header() {
               </a>
             )
           })}
-          <MagneticButton href="#contact" className="rounded-lg bg-gradient-to-r from-brand-blue-600 to-brand-blue-500 text-white px-4 py-2 text-sm shadow hover:opacity-95">Talk to Us</MagneticButton>
+
         </nav>
       </div>
       {mobileOpen && (
@@ -97,13 +97,7 @@ export default function Header() {
                 </a>
               )
             })}
-            <a
-              href="#contact"
-              onClick={() => setMobileOpen(false)}
-              className="rounded-lg bg-gradient-to-r from-brand-blue-600 to-brand-blue-500 text-white px-4 py-2 text-sm shadow text-center"
-            >
-              Talk to Us
-            </a>
+
           </div>
         </div>
       )}

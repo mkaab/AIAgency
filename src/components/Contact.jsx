@@ -59,7 +59,7 @@ export default function Contact() {
             <span className="block text-sm font-medium text-brand-charcoal">Which services are you interested in?</span>
             <div className="mt-4 grid gap-5 md:grid-cols-3">
               <label className="inline-flex items-center gap-2 text-sm text-brand-charcoal/90">
-                <br></br>
+
                 <input type="radio" name="services" value="AI Transformation" className="h-4 w-4" />
                 <span>AI Transformation</span>
               </label>
@@ -87,7 +87,7 @@ export default function Contact() {
               disabled={state.submitting}
               className="rounded-lg bg-gradient-to-r from-brand-blue-600 to-brand-blue-500 px-5 py-2.5 text-sm shadow hover:opacity-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue-500/50 disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              {state.submitting ? 'Submitting…' : 'Submit'}
+              {state.submitting ? 'Submitting…' : state.succeeded ? 'Submitted' : 'Submit'}
             </button>
             {state.succeeded && <span className="text-green-600 text-sm">Thanks! We’ll be in touch.</span>}
             {!!state.errors?.length && <span className="text-red-600 text-sm">Something went wrong. Please try again.</span>}
