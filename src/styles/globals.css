@@ -5,24 +5,42 @@
   --text: #333333;
 }
 
-html { scroll-behavior: smooth; }
-section { scroll-margin-top: 88px; }
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 88px;
+}
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
   }
 }
 
-html, body, #root { height: 100%; }
+html,
+body,
+#root {
+  height: 100%;
+}
+
 body {
   margin: 0;
   color: var(--text);
   background-color: var(--bg);
-  line-height: 1.6;
+  font-size: 17px;
+  /* Increased from default 16px */
+  line-height: 1.75;
+  /* Improved from 1.6 */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -31,21 +49,90 @@ body {
     radial-gradient(1000px 500px at 15% 10%, rgba(0, 123, 255, 0.08), transparent 60%),
     radial-gradient(800px 400px at 85% 80%, rgba(0, 150, 255, 0.07), transparent 60%),
     /* Subtle grid */
-    linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
+    linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
   background-size: auto, auto, 40px 40px, 40px 40px;
   background-position: 0 0, 0 0, -1px -1px, -1px -1px;
 }
 
 /* Headings tighten tracking slightly for a premium look */
-h1, h2, h3 { letter-spacing: -0.01em; line-height: 1.15; }
+h1,
+h2,
+h3 {
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+/* Improved from 1.15 */
 
 /* Global link interactions */
-a { text-decoration: none; transition: color 150ms ease; }
-a:hover { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 2px; }
+a {
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
 
 /* Vertical rhythm helpers */
-p + p { margin-top: 0.75rem; }
-section > * + * { margin-top: 1.25rem; }
+p+p {
+  margin-top: 0.75rem;
+}
 
-:focus-visible { outline: 2px solid #0096FF; outline-offset: 2px; }
+section>*+* {
+  margin-top: 1.25rem;
+}
+
+/* Improved section spacing */
+section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* Better breathing room */
+
+:focus-visible {
+  outline: 2px solid #0096FF;
+  outline-offset: 2px;
+}
+
+/* Force Prose Heading Styles */
+.prose h2,
+.prose h3,
+.prose h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #333333;
+  font-weight: 700;
+}
+
+.prose h2 {
+  font-size: 1.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose h3 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose strong {
+  color: #333333;
+  font-weight: 600;
+}
+
+.prose ul {
+  list-style-type: disc;
+  padding-left: 1.625rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}

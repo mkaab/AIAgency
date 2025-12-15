@@ -30,8 +30,13 @@ export default function Services() {
                 className="snap-center shrink-0 w-[85%] max-w-sm group rounded-2xl p-[1px] bg-gradient-to-br from-brand-blue-600/55 via-brand-blue-500/30 to-transparent hover:from-brand-blue-600/65 hover:via-brand-blue-500/40 transition"
               >
                 <div className="h-full rounded-2xl bg-white/80 backdrop-blur-sm p-7 shadow-sm group-hover:shadow-lg group-hover:-translate-y-0.5 transition text-center">
-                  <div className="mx-auto h-12 w-12 rounded-lg bg-brand-blue-600/15 flex items-center justify-center text-brand-blue-600 font-semibold"></div>
-                  <div className="mt-5 text-2xl font-semibold text-brand-charcoal">{s.title}</div>
+                  {/* Icon placeholder - replace with your icons */}
+                  <div className="mx-auto h-12 w-12 rounded-lg bg-brand-blue-600/15 flex items-center justify-center text-brand-blue-600 font-semibold">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div className="mt-5 text-2xl font-semibold text-brand-charcoal font-display">{s.title}</div>
                   <p className="mt-3 text-[15px] leading-6 text-brand-charcoal/80">{s.desc}</p>
                 </div>
               </motion.div>
@@ -50,8 +55,13 @@ export default function Services() {
                 className="group rounded-2xl p-[1px] bg-gradient-to-br from-brand-blue-600/55 via-brand-blue-500/30 to-transparent hover:from-brand-blue-600/65 hover:via-brand-blue-500/40 transition"
               >
                 <div className="h-full rounded-2xl bg-white/80 backdrop-blur-sm p-7 shadow-sm group-hover:shadow-lg group-hover:-translate-y-0.5 transition text-center">
-                  <div className="mx-auto h-12 w-12 rounded-lg bg-brand-blue-600/15 flex items-center justify-center text-brand-blue-600 font-semibold"></div>
-                  <div className="mt-5 text-2xl font-semibold text-brand-charcoal">{s.title}</div>
+                  {/* Icon placeholder - replace with your icons */}
+                  <div className="mx-auto h-12 w-12 rounded-lg bg-brand-blue-600/15 flex items-center justify-center text-brand-blue-600 font-semibold">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div className="mt-5 text-2xl font-semibold text-brand-charcoal font-display">{s.title}</div>
                   <p className="mt-3 text-[15px] leading-6 text-brand-charcoal/80">{s.desc}</p>
                 </div>
               </motion.div>

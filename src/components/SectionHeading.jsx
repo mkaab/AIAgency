@@ -15,7 +15,7 @@ export default function SectionHeading({ eyebrow, title, className = '' }) {
       >
         <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-brand-blue-600/10 to-brand-blue-500/10 blur-lg" aria-hidden />
         <div className="relative">
-          <h2 className="text-4xl md:text-5xl font-semibold text-brand-charcoal">
+          <h2 className="font-display text-4xl md:text-5xl font-semibold text-brand-charcoal">
             {title}
           </h2>
           <div className="mt-2 h-[3px] w-20 rounded-full bg-gradient-to-r from-brand-blue-600 to-brand-blue-500 mx-auto" />

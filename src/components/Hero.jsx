@@ -33,7 +33,10 @@ export default function Hero() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold tracking-tight text-brand-charcoal drop-shadow-[0_1px_0_rgba(255,255,255,0.6)]"
+            className="font-display text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] text-brand-charcoal drop-shadow-[0_1px_0_rgba(255,255,255,0.6)]"
+            style={{
+              textShadow: '0 0 40px rgba(0, 123, 255, 0.15)'
+            }}
           >
             Human Intelligence. Augmented.
           </motion.h1>
@@ -44,9 +47,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.6 }}
-            className="mt-4 max-w-3xl text-brand-charcoal/80"
+            className="mt-6 max-w-3xl text-lg text-brand-charcoal/80"
           >
-           As your AI transformation partner, we set & execute your enterprise AI strategy at startup speed.
+            As your AI transformation partner, we set & execute your enterprise AI strategy at startup speed.
           </motion.p>
         </Parallax>
 

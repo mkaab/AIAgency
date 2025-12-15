@@ -17,7 +17,9 @@ export default function Stats() {
         <div className="pointer-events-none absolute inset-x-0 top-8 h-40 bg-gradient-to-r from-brand-blue-600/10 via-transparent to-brand-blue-500/10" />
       </Parallax>
       <SectionHeading title="Outcomes at a Glance" />
-      <div className="mt-10 rounded-2xl bg-white/80 backdrop-blur-sm p-6 shadow-sm border border-black/5">
+      <div className="mt-10 rounded-2xl bg-white/80 backdrop-blur-sm p-6 shadow-sm border border-black/5 relative overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgb(0, 123, 255) 1px, transparent 0)', backgroundSize: '40px 40px' }} aria-hidden="true" />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((s, i) => (
             <motion.div
@@ -32,7 +34,7 @@ export default function Stats() {
                 <div className="absolute -inset-2 rounded-full bg-gradient-to-br from-brand-blue-600/15 to-brand-blue-500/10 blur" aria-hidden />
                 <div className="relative inline-flex h-16 w-16 items-center justify-center rounded-full bg-white/90 border border-black/5 shadow-sm">
                   <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-brand-blue-600/20 to-transparent" aria-hidden />
-                  <CountUp value={s.value} className="text-xl font-semibold text-brand-charcoal" />
+                  <CountUp value={s.value} className="font-display text-xl font-semibold text-brand-charcoal" />
                 </div>
               </div>
               <div className="text-sm text-brand-charcoal/80">{s.label}</div>

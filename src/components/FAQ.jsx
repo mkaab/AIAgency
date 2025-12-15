@@ -19,51 +19,51 @@ export default function FAQ() {
       <div className="mt-10 rounded-2xl p-[1px] bg-gradient-to-br from-brand-blue-600/40 via-brand-blue-500/20 to-transparent">
         <div className="rounded-2xl bg-white/80 backdrop-blur-sm p-6 shadow-sm border border-black/5">
           <dl className="divide-y divide-black/10">
-          {faqs.map((f, i) => {
-            const isOpen = open === i
-            return (
-              <div key={f.q} className="py-1" role="group" aria-labelledby={`faq-label-${i}`}>
-                <motion.button
-                  initial={{ opacity: 0, y: 8 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.05 * i }}
-                  aria-expanded={isOpen}
-                  aria-controls={`faq-panel-${i}`}
-                  onClick={() => setOpen(isOpen ? null : i)}
-                  className="flex w-full items-center justify-between text-left gap-4 rounded-lg px-2 py-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue-500/40 hover:bg-black/2"
-                >
-                  <span id={`faq-label-${i}`} className="font-medium text-brand-charcoal">{f.q}</span>
-                  <svg
-                    className={`h-5 w-5 shrink-0 text-brand-charcoal/70 transition-transform ${isOpen ? 'rotate-180' : ''}`}
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    stroke="currentColor"
-                    aria-hidden
+            {faqs.map((f, i) => {
+              const isOpen = open === i
+              return (
+                <div key={f.q} className="py-1" role="group" aria-labelledby={`faq-label-${i}`}>
+                  <motion.button
+                    initial={{ opacity: 0, y: 8 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.05 * i }}
+                    aria-expanded={isOpen}
+                    aria-controls={`faq-panel-${i}`}
+                    onClick={() => setOpen(isOpen ? null : i)}
+                    className="flex w-full items-center justify-between text-left gap-4 rounded-lg px-2 py-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue-500/40 hover:bg-black/2"
                   >
-                    <path d="M6 8l4 4 4-4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </motion.button>
-                <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.dd
-                      id={`faq-panel-${i}`}
-                      key="content"
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.22 }}
-                      className="overflow-hidden pl-2"
+                    <span id={`faq-label-${i}`} className="font-display font-medium text-brand-charcoal">{f.q}</span>
+                    <svg
+                      className={`h-5 w-5 shrink-0 text-brand-charcoal/70 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      stroke="currentColor"
+                      aria-hidden
                     >
-                      <div className="pt-2 pb-3 text-sm leading-6 text-brand-charcoal/80">
-                        {f.a}
-                      </div>
-                    </motion.dd>
-                  )}
-                </AnimatePresence>
-              </div>
-            )
-          })}
+                      <path d="M6 8l4 4 4-4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </motion.button>
+                  <AnimatePresence initial={false}>
+                    {isOpen && (
+                      <motion.dd
+                        id={`faq-panel-${i}`}
+                        key="content"
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.22 }}
+                        className="overflow-hidden pl-2"
+                      >
+                        <div className="pt-2 pb-3 text-sm leading-6 text-brand-charcoal/80">
+                          {f.a}
+                        </div>
+                      </motion.dd>
+                    )}
+                  </AnimatePresence>
+                </div>
+              )
+            })}
           </dl>
         </div>
       </div>
