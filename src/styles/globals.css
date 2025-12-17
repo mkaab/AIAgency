@@ -88,8 +88,15 @@ section>*+* {
 
 /* Improved section spacing */
 section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
 }
 
 /* Better breathing room */
