@@ -4,6 +4,12 @@ import { Link, useLocation } from 'react-router-dom'
 const links = [
     { href: '#about', label: 'About' },
     { href: '#services', label: 'Services' },
+    {
+        label: 'Products',
+        children: [
+            { href: '/products/nexus', label: 'Nexus', isRoute: true }
+        ]
+    },
     { href: '#team', label: 'Team' },
     { href: '#impact', label: 'Impact' },
     { href: '#faq', label: 'FAQ' },
@@ -16,6 +22,7 @@ export default function Header() {
     const [active, setActive] = useState('')
     const [logoOk, setLogoOk] = useState(true)
     const [mobileOpen, setMobileOpen] = useState(false)
+    const [dropdownOpen, setDropdownOpen] = useState(null)
     const location = useLocation()
     const isHome = location.pathname === '/'
 
@@ -74,7 +81,38 @@ export default function Header() {
                     ☰
                 </button>
                 <nav className="hidden md:flex items-center gap-6">
-                    {links.map((l) => {
+                    {links.map((l, i) => {
+                        // Dropdown handling
+                        if (l.children) {
+                            return (
+                                <div
+                                    key={i}
+                                    className="relative group"
+                                    onMouseEnter={() => setDropdownOpen(i)}
+                                    onMouseLeave={() => setDropdownOpen(null)}
+                                >
+                                    <button className="flex items-center gap-1 text-sm text-brand-charcoal/80 hover:text-brand-blue-600 transition-colors py-2">
+                                        {l.label}
+                                        <svg className="w-3 h-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
+                                    </button>
+
+                                    <div className={`absolute top-full left-0 pt-2 w-48 transition-all duration-200 ${dropdownOpen === i ? 'opacity-100 translate-y-0 visible' : 'opacity-0 translate-y-2 invisible'}`}>
+                                        <div className="bg-white rounded-xl shadow-xl border border-black/5 overflow-hidden p-1">
+                                            {l.children.map((child) => (
+                                                <Link
+                                                    key={child.href}
+                                                    to={child.href}
+                                                    className="block px-4 py-2 text-sm text-brand-charcoal/80 hover:bg-brand-blue-50 hover:text-brand-blue-600 rounded-lg transition-colors"
+                                                >
+                                                    {child.label}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        }
+
                         const isActive = active === l.href || (l.isRoute && location.pathname === l.href)
 
                         if (l.isRoute) {
@@ -105,7 +143,25 @@ export default function Header() {
             {mobileOpen && (
                 <div className="md:hidden border-t border-black/10 bg-white/85 backdrop-blur-xl">
                     <div className="mx-auto max-w-6xl px-4 py-3 flex flex-col gap-3">
-                        {links.map((l) => {
+                        {links.map((l, i) => {
+                            if (l.children) {
+                                return (
+                                    <div key={i} className="flex flex-col gap-2">
+                                        <div className="text-sm font-medium text-brand-charcoal/50 px-1 pt-2 uppercase tracking-wider text-[10px]">{l.label}</div>
+                                        {l.children.map(child => (
+                                            <Link
+                                                key={child.href}
+                                                to={child.href}
+                                                onClick={() => setMobileOpen(false)}
+                                                className="block px-3 py-2 text-sm text-brand-charcoal/80 hover:bg-black/5 rounded-lg"
+                                            >
+                                                {child.label}
+                                            </Link>
+                                        ))}
+                                    </div>
+                                )
+                            }
+
                             const isActive = active === l.href || (l.isRoute && location.pathname === l.href)
 
                             if (l.isRoute) {

@@ -6,8 +6,10 @@ export default {
       colors: {
         brand: {
           blue: {
+            400: "#33ADFF",
             500: "#0096FF",
             600: "#007BFF",
+            700: "#0069D9",
           },
           silver: "#C0C0C0",
           charcoal: "#333333",
