@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { Parallax } from 'react-scroll-parallax'
 import SectionHeading from './SectionHeading'
 
 const cases = [
@@ -11,14 +10,12 @@ const cases = [
 
 export default function CaseStudies() {
   return (
-    <section id="impact" className="relative overflow-hidden">
-      <Parallax speed={-6}>
-        <div className="absolute inset-x-0 top-10 h-48 bg-gradient-to-r from-brand-blue-600/10 via-transparent to-brand-blue-500/10" />
-      </Parallax>
-      <div className="relative mx-auto max-w-6xl px-4 py-20">
+    <section id="impact" className="relative overflow-hidden pointer-events-none">
+      <div className="relative mx-auto max-w-6xl px-4 py-20 pointer-events-auto">
         <SectionHeading title="What we believe" />
-        <div className="mt-10 rounded-2xl bg-white/80 backdrop-blur-sm p-6 shadow-sm border border-black/5">
-          <div className="grid gap-6 md:grid-cols-4">
+        
+        <div className="mt-16 rounded-3xl bg-white/50 backdrop-blur-xl p-8 shadow-2xl shadow-black/[0.04] border border-black/5">
+          <div className="grid gap-8 md:grid-cols-4">
             {cases.map((c, i) => (
               <motion.div
                 key={c.kpi}
@@ -26,17 +23,16 @@ export default function CaseStudies() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.06 * i }}
-                className="rounded-2xl p-[1px] bg-gradient-to-br from-brand-blue-600/40 via-brand-blue-500/20 to-transparent"
+                className="rounded-3xl p-[1px] bg-gradient-to-br from-black/5 to-transparent group cursor-pointer"
               >
-                <div className="rounded-2xl bg-white/85 backdrop-blur-sm shadow-sm overflow-hidden">
-                  <div className="relative h-20 w-full bg-[linear-gradient(135deg,rgba(0,123,255,0.15),rgba(0,150,255,0.15))]">
-                    {/* Placeholder image slot */}
-                    <img src={c.img} alt="Case study" className="h-full w-full object-cover" onError={(e) => { e.currentTarget.style.display = 'none' }} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-white/40 to-transparent" />
+                <div className="h-full rounded-3xl bg-white/90 backdrop-blur-xl border border-white overflow-hidden shadow-xl shadow-black/[0.04] group-hover:shadow-2xl group-hover:shadow-black/10 group-hover:-translate-y-1 transition-all">
+                  <div className="relative h-24 w-full bg-[linear-gradient(135deg,rgba(0,123,255,0.05),rgba(0,150,255,0.02))] overflow-hidden border-b border-black/5">
+                    {/* Animated gradient overlay to replace image error if no image exists */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#19325a]/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition duration-500" />
                   </div>
                   <div className="p-6 text-center">
-                    <div className="font-display text-xl font-semibold text-brand-charcoal">{c.kpi}</div>
-                    <p className="mt-2 text-sm text-brand-charcoal/80">{c.blurb}</p>
+                    <div className="font-display text-xl font-bold text-brand-charcoal">{c.kpi}</div>
+                    <p className="mt-3 text-sm leading-relaxed text-brand-charcoal/70">{c.blurb}</p>
                   </div>
                 </div>
               </motion.div>

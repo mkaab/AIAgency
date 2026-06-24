@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion'
 import SectionHeading from './SectionHeading'
-import { Parallax } from 'react-scroll-parallax'
 
 const services = [
   { title: 'AI Strategy', desc: 'No 6-month strategy work. No 200-slide presentations. We get right to work on holistic & function-specific audits that surface the most compelling AI use cases.' },
@@ -11,15 +10,13 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="relative overflow-hidden bg-white/60">
-      <Parallax speed={-4}>
-        <div className="pointer-events-none absolute inset-x-0 top-8 h-40 bg-gradient-to-r from-brand-blue-600/10 via-transparent to-brand-blue-500/10" />
-      </Parallax>
-      <div className="relative mx-auto max-w-6xl px-4 py-20">
+    <section id="services" className="relative overflow-hidden pointer-events-none">
+      <div className="relative mx-auto max-w-6xl px-4 py-20 pointer-events-auto">
         <SectionHeading title="Services" />
-        <div className="mt-10 rounded-2xl bg-white/80 backdrop-blur-sm p-6 shadow-sm border border-black/5">
+        
+        <div className="mt-16 rounded-3xl bg-white/50 backdrop-blur-xl p-8 md:p-12 shadow-2xl shadow-black/[0.04] border border-black/5">
           {/* Mobile: horizontal scroll with snap */}
-          <div className="md:hidden -mx-4 px-4 pb-2 flex gap-5 overflow-x-auto snap-x snap-mandatory">
+          <div className="md:hidden -mx-4 px-4 pb-4 flex gap-5 overflow-x-auto snap-x snap-mandatory">
             {services.map((s, i) => (
               <motion.div
                 key={s.title}
@@ -27,24 +24,23 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.05 * i }}
-                className="snap-center shrink-0 w-[85%] max-w-sm group rounded-2xl p-[1px] bg-gradient-to-br from-brand-blue-600/55 via-brand-blue-500/30 to-transparent hover:from-brand-blue-600/65 hover:via-brand-blue-500/40 transition"
+                className="snap-center shrink-0 w-[85%] max-w-sm group rounded-3xl p-[1px] bg-gradient-to-br from-black/5 to-transparent transition"
               >
-                <div className="h-full rounded-2xl bg-white/80 backdrop-blur-sm p-7 shadow-sm group-hover:shadow-lg group-hover:-translate-y-0.5 transition text-center">
-                  {/* Icon placeholder - replace with your icons */}
-                  <div className="mx-auto h-12 w-12 rounded-lg bg-brand-blue-600/15 flex items-center justify-center text-brand-blue-600 font-semibold">
+                <div className="h-full rounded-3xl bg-white/90 backdrop-blur-xl border border-white p-8 shadow-xl shadow-black/[0.04] group-hover:shadow-2xl group-hover:shadow-black/10 group-hover:-translate-y-1 transition-all text-center">
+                  <div className="mx-auto h-14 w-14 rounded-2xl bg-[#19325a]/10 flex items-center justify-center text-[#19325a] font-semibold shadow-inner border border-[#19325a]/20">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
-                  <div className="mt-5 text-2xl font-semibold text-brand-charcoal font-display">{s.title}</div>
-                  <p className="mt-3 text-[15px] leading-6 text-brand-charcoal/80">{s.desc}</p>
+                  <div className="mt-6 text-2xl font-bold text-brand-charcoal font-display">{s.title}</div>
+                  <p className="mt-4 text-[15px] leading-relaxed text-brand-charcoal/70">{s.desc}</p>
                 </div>
               </motion.div>
             ))}
           </div>
 
           {/* Desktop: clean grid */}
-          <div className="hidden md:grid gap-6 md:grid-cols-1 lg:grid-cols-1">
+          <div className="hidden md:grid gap-8 md:grid-cols-2 lg:grid-cols-2">
             {services.map((s, i) => (
               <motion.div
                 key={s.title}
@@ -52,17 +48,16 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.05 * i }}
-                className="group rounded-2xl p-[1px] bg-gradient-to-br from-brand-blue-600/55 via-brand-blue-500/30 to-transparent hover:from-brand-blue-600/65 hover:via-brand-blue-500/40 transition"
+                className="group rounded-3xl p-[1px] bg-gradient-to-br from-black/5 to-transparent transition"
               >
-                <div className="h-full rounded-2xl bg-white/80 backdrop-blur-sm p-7 shadow-sm group-hover:shadow-lg group-hover:-translate-y-0.5 transition text-center">
-                  {/* Icon placeholder - replace with your icons */}
-                  <div className="mx-auto h-12 w-12 rounded-lg bg-brand-blue-600/15 flex items-center justify-center text-brand-blue-600 font-semibold">
+                <div className="h-full rounded-3xl bg-white/90 backdrop-blur-xl border border-white p-10 shadow-xl shadow-black/[0.04] group-hover:shadow-2xl group-hover:shadow-black/10 group-hover:-translate-y-1 transition-all text-center">
+                  <div className="mx-auto h-14 w-14 rounded-2xl bg-[#19325a]/10 flex items-center justify-center text-[#19325a] font-semibold shadow-inner border border-[#19325a]/20">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
-                  <div className="mt-5 text-2xl font-semibold text-brand-charcoal font-display">{s.title}</div>
-                  <p className="mt-3 text-[15px] leading-6 text-brand-charcoal/80">{s.desc}</p>
+                  <div className="mt-6 text-2xl font-bold text-brand-charcoal font-display">{s.title}</div>
+                  <p className="mt-4 text-base leading-relaxed text-brand-charcoal/70">{s.desc}</p>
                 </div>
               </motion.div>
             ))}

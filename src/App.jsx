@@ -6,10 +6,12 @@ import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
 import Nexus from './pages/Nexus'
 import Privacy from './pages/Privacy'
+import Scene from './components/canvas/Scene'
 
 export default function App() {
     return (
         <ParallaxProvider>
+            <Scene />
             <Layout>
                 <Routes>
                     <Route path="/" element={<Home />} />

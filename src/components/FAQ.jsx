@@ -14,28 +14,28 @@ export default function FAQ() {
   const [open, setOpen] = useState(null)
 
   return (
-    <section id="faq" className="mx-auto max-w-6xl px-4 py-20">
+    <section id="faq" className="mx-auto max-w-4xl px-4 py-20">
       <SectionHeading title="FAQ" />
-      <div className="mt-10 rounded-2xl p-[1px] bg-gradient-to-br from-brand-blue-600/40 via-brand-blue-500/20 to-transparent">
-        <div className="rounded-2xl bg-white/80 backdrop-blur-sm p-6 shadow-sm border border-black/5">
-          <dl className="divide-y divide-black/10">
-            {faqs.map((f, i) => {
-              const isOpen = open === i
-              return (
-                <div key={f.q} className="py-1" role="group" aria-labelledby={`faq-label-${i}`}>
-                  <motion.button
-                    initial={{ opacity: 0, y: 8 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.05 * i }}
-                    aria-expanded={isOpen}
-                    aria-controls={`faq-panel-${i}`}
-                    onClick={() => setOpen(isOpen ? null : i)}
-                    className="flex w-full items-center justify-between text-left gap-4 rounded-lg px-2 py-3 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue-500/40 hover:bg-black/2"
-                  >
-                    <span id={`faq-label-${i}`} className="font-display font-medium text-brand-charcoal">{f.q}</span>
+      <div className="mt-16 rounded-3xl bg-white/50 backdrop-blur-xl p-6 md:p-8 shadow-2xl shadow-black/[0.04] border border-black/5">
+        <dl className="divide-y divide-black/5">
+          {faqs.map((f, i) => {
+            const isOpen = open === i
+            return (
+              <div key={f.q} className="py-4" role="group" aria-labelledby={`faq-label-${i}`}>
+                <motion.button
+                  initial={{ opacity: 0, y: 8 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.05 * i }}
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-panel-${i}`}
+                  onClick={() => setOpen(isOpen ? null : i)}
+                  className="flex w-full items-center justify-between text-left gap-4 rounded-xl px-4 py-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50 hover:bg-black/5 transition-colors"
+                >
+                  <span id={`faq-label-${i}`} className="font-display text-lg font-bold text-brand-charcoal">{f.q}</span>
+                  <div className={`flex items-center justify-center w-8 h-8 rounded-full border transition-colors ${isOpen ? 'border-[#19325a] text-[#19325a] bg-[#19325a]/10' : 'border-black/10 text-brand-charcoal/50 bg-white/50'}`}>
                     <svg
-                      className={`h-5 w-5 shrink-0 text-brand-charcoal/70 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+                      className={`h-4 w-4 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
                       viewBox="0 0 20 20"
                       fill="none"
                       stroke="currentColor"
@@ -43,29 +43,29 @@ export default function FAQ() {
                     >
                       <path d="M6 8l4 4 4-4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
-                  </motion.button>
-                  <AnimatePresence initial={false}>
-                    {isOpen && (
-                      <motion.dd
-                        id={`faq-panel-${i}`}
-                        key="content"
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.22 }}
-                        className="overflow-hidden pl-2"
-                      >
-                        <div className="pt-2 pb-3 text-sm leading-6 text-brand-charcoal/80">
-                          {f.a}
-                        </div>
-                      </motion.dd>
-                    )}
-                  </AnimatePresence>
-                </div>
-              )
-            })}
-          </dl>
-        </div>
+                  </div>
+                </motion.button>
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.dd
+                      id={`faq-panel-${i}`}
+                      key="content"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
+                      className="overflow-hidden px-4"
+                    >
+                      <div className="pt-2 pb-6 text-base leading-relaxed text-brand-charcoal/70">
+                        {f.a}
+                      </div>
+                    </motion.dd>
+                  )}
+                </AnimatePresence>
+              </div>
+            )
+          })}
+        </dl>
       </div>
     </section>
   )
