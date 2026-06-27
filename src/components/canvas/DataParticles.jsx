@@ -42,8 +42,8 @@ export default function DataParticles({ count = 3000 }) {
     const timeY = state.clock.elapsedTime * 0.02
 
     // Scroll rotation offset (make it spin smoothly as you scroll down the page)
-    const scrollOffsetX = scrollY * 0.001
-    const scrollOffsetY = scrollY * 0.0005
+    const scrollOffsetX = scrollY * 0.0005
+    const scrollOffsetY = scrollY * 0.00025
 
     // Mouse repel effect (subtle tilt based on pointer)
     const targetX = (state.pointer.x * Math.PI) / 6
