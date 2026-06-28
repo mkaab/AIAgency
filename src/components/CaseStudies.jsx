@@ -10,11 +10,12 @@ const cases = [
 
 export default function CaseStudies() {
   return (
-    <section id="impact" className="relative overflow-hidden pointer-events-none">
-      <div className="relative mx-auto max-w-6xl px-4 py-20 pointer-events-auto">
-        <SectionHeading title="What we believe" />
+    <section id="impact" className="relative pointer-events-auto bg-[#0c1a2f] text-white py-24 overflow-hidden">
+      <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]" />
+      <div className="relative mx-auto max-w-6xl px-4">
+        <SectionHeading title="What we believe" darkTheme={true} />
         
-        <div className="mt-16 rounded-3xl bg-white/50 backdrop-blur-xl p-8 shadow-2xl shadow-black/[0.04] border border-black/5">
+        <div className="mt-16 rounded-3xl bg-white/5 backdrop-blur-xl p-8 shadow-2xl shadow-black/50 border border-white/10">
           <div className="grid gap-8 md:grid-cols-4">
             {cases.map((c, i) => (
               <motion.div
@@ -23,16 +24,16 @@ export default function CaseStudies() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.06 * i }}
-                className="rounded-3xl p-[1px] bg-gradient-to-br from-black/5 to-transparent group cursor-pointer"
+                className="rounded-3xl p-[1px] bg-gradient-to-br from-white/10 to-transparent group cursor-pointer"
               >
-                <div className="h-full rounded-3xl bg-white/90 backdrop-blur-xl border border-white overflow-hidden shadow-xl shadow-black/[0.04] group-hover:shadow-2xl group-hover:shadow-black/10 group-hover:-translate-y-1 transition-all">
-                  <div className="relative h-24 w-full bg-[linear-gradient(135deg,rgba(0,123,255,0.05),rgba(0,150,255,0.02))] overflow-hidden border-b border-black/5">
+                <div className="h-full rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 overflow-hidden shadow-xl shadow-black/50 group-hover:shadow-2xl group-hover:bg-white/10 group-hover:-translate-y-1 transition-all">
+                  <div className="relative h-24 w-full bg-[linear-gradient(135deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02))] overflow-hidden border-b border-white/5">
                     {/* Animated gradient overlay to replace image error if no image exists */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#19325a]/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
                   </div>
                   <div className="p-6 text-center">
-                    <div className="font-display text-xl font-bold text-brand-charcoal">{c.kpi}</div>
-                    <p className="mt-3 text-sm leading-relaxed text-brand-charcoal/70">{c.blurb}</p>
+                    <div className="font-display text-xl font-bold text-white">{c.kpi}</div>
+                    <p className="mt-3 text-sm leading-relaxed text-white/70">{c.blurb}</p>
                   </div>
                 </div>
               </motion.div>
