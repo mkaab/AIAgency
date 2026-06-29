@@ -3,10 +3,10 @@ import { motion } from 'framer-motion'
 import CountUp from './CountUp'
 
 const stats = [
-  { value: '35%', label: 'Manual ops reduced' },
-  { value: '3x', label: 'Faster triage' },
-  { value: '22%', label: 'Lead QA speed-up' },
-  { value: '95%', label: 'Task accuracy with HITL' },
+  { value: '40%', label: 'Customer issues auto-resolved' },
+  { value: '30%', label: 'Reduction in ops costs' },
+  { value: '5x', label: 'Higher ROI with scaled AI' },
+  { value: '2x', label: 'Profit margins for AI leaders' },
 ]
 
 export default function Stats() {
@@ -39,6 +39,9 @@ export default function Stats() {
               </motion.div>
             ))}
           </div>
+        </div>
+        <div className="mt-4 text-right text-xs text-white/50 px-4">
+          *Based on data from McKinsey Global AI Survey and JPMorgan Chase AI Research
         </div>
       </div>
     </section>
