@@ -17,18 +17,21 @@ export default function Nexus() {
                             transition={{ duration: 0.6 }}
                         >
                             <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-sm font-bold text-brand-charcoal bg-white rounded-full border border-black/10 shadow-sm">
-                                <span className="text-[#19325a]">⚡</span> Plug-and-Play Integration
+                                <span className="text-[#19325a]">⚡</span> Your First AI Employee
                             </div>
                             <h1 className="font-display text-5xl md:text-7xl font-extrabold text-brand-charcoal mb-6 leading-[1.05] tracking-tight">
-                                Turn every customer chat into a <span className="text-[#19325a]">sale.</span>
+                                Automate support. <span className="text-[#19325a]">Multiply sales.</span>
                             </h1>
                             <p className="text-lg text-brand-charcoal/70 mb-8 max-w-lg leading-relaxed">
-                                Nexus is the premier autonomous AI team for modern e-commerce. Deploy an AI Shopping Assistant, a Support Concierge, and a native Voice AI rep that work 24/7. No extra headcount required.
+                                Nexus is your all-in-one AI Commerce Employee. Instantly deploy a Shopping Assistant, Support Concierge, and Voice AI rep that work 24/7, driving revenue with zero extra headcount.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <a href={shopifyAppUrl} target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-[#19325a] text-white text-center rounded-full font-bold hover:bg-[#0c1a2f] transition-all shadow-[0_8px_30px_rgba(25,50,90,0.3)] hover:shadow-[0_12px_40px_rgba(25,50,90,0.4)] flex items-center justify-center gap-2">
                                     Install on Shopify <span className="text-white/70 text-sm font-normal">(1-Day Free Trial)</span>
                                 </a>
+                                <button className="px-8 py-4 bg-white text-[#19325a] text-center rounded-full font-bold border-2 border-[#19325a]/10 hover:border-[#19325a]/30 transition-all flex items-center justify-center gap-2">
+                                    ▶ Watch Demo <span className="text-[#19325a]/70 text-sm font-normal">(1 min)</span>
+                                </button>
                             </div>
                         </motion.div>
 
@@ -70,7 +73,7 @@ export default function Nexus() {
                                         <div className="self-end bg-[#19325a] text-white p-3 rounded-2xl rounded-tr-sm shadow-sm max-w-[85%]">
                                             <p>Do you have the minimalist ceramic vase in stock? Need it for a gift.</p>
                                         </div>
-                                        
+
                                         <div className="self-start w-full">
                                             <div className="bg-white border border-black/10 rounded-2xl rounded-tl-sm shadow-sm overflow-hidden text-brand-charcoal">
                                                 <div className="p-3 border-b border-black/5 bg-gray-50/50">
