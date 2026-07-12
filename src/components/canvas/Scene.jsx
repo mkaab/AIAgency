@@ -24,7 +24,7 @@ export default function Scene() {
         >
           <Suspense fallback={null}>
             <ambientLight intensity={0.5} />
-            <DataParticles count={3400} />
+            <DataParticles count={1700} />
             <Preload all />
           </Suspense>
         </Canvas>
