@@ -1,8 +1,12 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Parallax } from 'react-scroll-parallax'
 import MagneticButton from './MagneticButton'
+import OnboardingForm from './OnboardingForm'
 
 export default function Hero() {
+  const [isFormOpen, setIsFormOpen] = useState(false)
+
   return (
     <section id="hero" className="relative min-h-[84vh] flex items-center overflow-hidden">
       <div className="relative mx-auto max-w-7xl px-8 py-24 pointer-events-none">
@@ -30,7 +34,7 @@ export default function Hero() {
         </Parallax>
 
         <div className="mt-10 flex flex-wrap gap-4 pointer-events-auto">
-          <MagneticButton href="#contact" className="!bg-[#19325a] !text-white !shadow-[0_8px_30px_rgba(25,50,90,0.3)] hover:!shadow-[0_12px_40px_rgba(25,50,90,0.4)] border border-transparent">
+          <MagneticButton onClick={() => setIsFormOpen(true)} className="!bg-[#19325a] !text-white !shadow-[0_8px_30px_rgba(25,50,90,0.3)] hover:!shadow-[0_12px_40px_rgba(25,50,90,0.4)] border border-transparent">
             Talk to Us
           </MagneticButton>
           <a
@@ -41,6 +45,9 @@ export default function Hero() {
           </a>
         </div>
       </div>
+
+      <OnboardingForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
     </section>
   )
 }
+

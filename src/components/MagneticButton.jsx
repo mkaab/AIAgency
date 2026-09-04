@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import { motion, useSpring, useTransform } from 'framer-motion'
 import clsx from 'clsx'
 
-export default function MagneticButton({ children, href, className }) {
+export default function MagneticButton({ children, href, onClick, className }) {
   const ref = useRef(null)
   const [isHovered, setIsHovered] = useState(false)
 
@@ -52,6 +52,7 @@ export default function MagneticButton({ children, href, className }) {
     >
       <Tag
         href={href}
+        onClick={onClick}
         className={clsx(
           "relative inline-flex items-center justify-center px-8 py-4 overflow-hidden rounded-full font-medium transition-all duration-300",
           "bg-brand-charcoal text-white shadow-lg",
