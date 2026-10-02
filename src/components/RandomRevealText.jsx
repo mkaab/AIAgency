@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { useInView } from 'framer-motion';
 
-export default function RandomRevealText({ text, className }) {
+export default function RandomRevealText({ text, className, as: Component = 'h1' }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-10%" });
   const [revealedIndices, setRevealedIndices] = useState(new Set());
@@ -37,7 +37,7 @@ export default function RandomRevealText({ text, className }) {
   }, [isInView, text]);
 
   return (
-    <h1 ref={ref} className={className}>
+    <Component ref={ref} className={className}>
       {text.split('').map((char, index) => {
         if (char === '\n') return <br key={index} className="hidden md:block" />;
         if (char === ' ') return <span key={index}>&nbsp;</span>;
@@ -51,6 +51,6 @@ export default function RandomRevealText({ text, className }) {
           </span>
         );
       })}
-    </h1>
+    </Component>
   );
 }

@@ -14,11 +14,11 @@ export default function Scene() {
   }, [])
 
   return (
-    <div className={`fixed inset-0 w-full h-full -z-10 pointer-events-none transition-colors duration-1000 ${isMobile ? 'bg-gradient-to-br from-gray-50 via-white to-gray-100' : 'bg-[#f4f6f8]'}`}>
+    <div className={`fixed inset-0 w-full h-full -z-10 pointer-events-none transition-colors duration-1000 ${isMobile ? 'bg-gradient-to-br from-gray-50 via-white to-gray-100' : 'bg-[#f4f6f8]'}`} style={{ transform: 'translateZ(0)', willChange: 'transform' }}>
       {!isMobile && (
         <Canvas
           camera={{ position: [0, 0, 8], fov: 45 }}
-          gl={{ antialias: true, alpha: true }}
+          gl={{ antialias: false, alpha: true, powerPreference: "high-performance" }}
           eventSource={document.getElementById('root')}
           eventPrefix="client"
         >

@@ -208,6 +208,8 @@ export default function Nexus() {
                 {/* Modular Pricing */}
                 <section className="px-6 py-24 bg-[#0c1a2f] text-white relative overflow-hidden">
                     <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]" />
+                    <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-blue-500/40 rounded-full blur-[100px] -translate-y-1/2" />
+                    <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-purple-500/40 rounded-full blur-[100px] -translate-y-1/2" />
                     <div className="mx-auto max-w-5xl relative z-10">
                         <div className="text-center mb-16">
                             <h2 className="font-display text-4xl md:text-5xl font-extrabold mb-4">Transparent, Results-Based Pricing</h2>

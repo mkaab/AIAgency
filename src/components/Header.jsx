@@ -27,8 +27,13 @@ export default function Header() {
     const isHome = location.pathname === '/'
 
     useEffect(() => {
-        const onScroll = () => setScrolled(window.scrollY > 8)
-        window.addEventListener('scroll', onScroll)
+        const onScroll = () => {
+            setScrolled(prev => {
+                const isScrolled = window.scrollY > 8
+                return prev !== isScrolled ? isScrolled : prev
+            })
+        }
+        window.addEventListener('scroll', onScroll, { passive: true })
         return () => window.removeEventListener('scroll', onScroll)
     }, [])
 
