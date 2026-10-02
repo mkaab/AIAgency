@@ -7,7 +7,7 @@ export default function RandomRevealText({ text, className, as: Component = 'h1'
   const [revealedIndices, setRevealedIndices] = useState(new Set());
   
   useEffect(() => {
-    if (!isInView) return;
+    if (!isInView || typeof text !== 'string') return;
     
     let unrevealed = Array.from(Array(text.length).keys()).filter(i => text[i] !== ' ' && text[i] !== '\n');
     
@@ -35,6 +35,10 @@ export default function RandomRevealText({ text, className, as: Component = 'h1'
     
     return () => clearInterval(interval);
   }, [isInView, text]);
+
+  if (typeof text !== 'string') {
+    return <Component ref={ref} className={className}>{text}</Component>;
+  }
 
   return (
     <Component ref={ref} className={className}>
