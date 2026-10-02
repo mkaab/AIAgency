@@ -1,5 +1,7 @@
 import { useForm } from '@formcarry/react'
 import { motion } from 'framer-motion'
+import { Glass } from 'amazing-glass/react'
+import 'amazing-glass/styles.css'
 
 export default function Nexus() {
     const { state, submit } = useForm({ id: 'ATbrs3Zki2t' })
@@ -213,22 +215,22 @@ export default function Nexus() {
                         </div>
 
                         <div className="grid md:grid-cols-3 gap-6">
-                            <div className="bg-white/5 backdrop-blur border border-white/10 rounded-[2rem] p-8 flex flex-col text-center items-center">
+                            <Glass variant="regular" params={{ blur: 16 }} className="border border-white/10 rounded-[2rem] p-8 flex flex-col text-center items-center">
                                 <h3 className="font-bold text-xl mb-2">Essential</h3>
                                 <p className="text-sm text-white/60 mb-6 flex-1">Basic text AI and automated support resolution for growing stores.</p>
                                 <a href={shopifyAppUrl} target="_blank" rel="noopener noreferrer" className="block w-full text-center py-3 bg-white/10 hover:bg-white/20 transition-colors rounded-xl font-bold">View Pricing</a>
-                            </div>
-                            <div className="bg-white/10 backdrop-blur border border-white/20 rounded-[2rem] p-8 flex flex-col relative transform md:-translate-y-4 shadow-2xl shadow-black/50 text-center items-center">
-                                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#19325a] px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Most Popular</div>
+                            </Glass>
+                            <Glass variant="clear" params={{ blur: 18 }} className="border border-white/20 rounded-[2rem] p-8 flex flex-col relative transform md:-translate-y-4 shadow-2xl shadow-black/50 text-center items-center">
+                                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#19325a] px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider z-20">Most Popular</div>
                                 <h3 className="font-bold text-xl mb-2">Growth</h3>
                                 <p className="text-sm text-white/60 mb-6 flex-1">Proactive sales, intelligent product recommendations, and omnichannel routing.</p>
                                 <a href={shopifyAppUrl} target="_blank" rel="noopener noreferrer" className="block w-full text-center py-3 bg-white text-[#19325a] hover:bg-gray-100 transition-colors rounded-xl font-bold">View Pricing</a>
-                            </div>
-                            <div className="bg-white/5 backdrop-blur border border-white/10 rounded-[2rem] p-8 flex flex-col text-center items-center">
+                            </Glass>
+                            <Glass variant="regular" params={{ blur: 16 }} className="border border-white/10 rounded-[2rem] p-8 flex flex-col text-center items-center">
                                 <h3 className="font-bold text-xl mb-2">Voice Pro</h3>
                                 <p className="text-sm text-white/60 mb-6 flex-1">The ultimate tier featuring our native, instant Voice AI representative.</p>
                                 <a href={shopifyAppUrl} target="_blank" rel="noopener noreferrer" className="block w-full text-center py-3 bg-white/10 hover:bg-white/20 transition-colors rounded-xl font-bold">View Pricing</a>
-                            </div>
+                            </Glass>
                         </div>
                     </div>
                 </section>

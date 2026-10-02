@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Parallax } from 'react-scroll-parallax'
 import MagneticButton from './MagneticButton'
 import OnboardingForm from './OnboardingForm'
+import RandomRevealText from './RandomRevealText'
 
 export default function Hero() {
   const [isFormOpen, setIsFormOpen] = useState(false)
@@ -11,15 +12,10 @@ export default function Hero() {
     <section id="hero" className="relative min-h-[84vh] flex items-center overflow-hidden">
       <div className="relative mx-auto max-w-7xl px-8 py-24 pointer-events-none">
         <Parallax speed={-5}>
-          <motion.h1
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+          <RandomRevealText
+            text={"Human Intelligence.\nAugmented."}
             className="font-display text-5xl md:text-7xl font-bold tracking-tight leading-[1.05] text-brand-charcoal"
-          >
-            Human Intelligence. <br className="hidden md:block" /> Augmented.
-          </motion.h1>
+          />
         </Parallax>
 
         <Parallax speed={-2}>

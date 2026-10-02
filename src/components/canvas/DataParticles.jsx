@@ -95,16 +95,13 @@ export default function DataParticles({ count = 1200 }) {
   useFrame((state, delta) => {
     if (!groupRef.current || isMobile) return
 
-    const scrollY = window.scrollY
     const timeX = state.clock.elapsedTime * 0.05
     const timeY = state.clock.elapsedTime * 0.02
-    const scrollOffsetX = scrollY * 0.0005
-    const scrollOffsetY = scrollY * 0.00025
     const targetX = (state.pointer.x * Math.PI) / 6
     const targetY = (state.pointer.y * Math.PI) / 6
 
-    groupRef.current.rotation.y = THREE.MathUtils.lerp(groupRef.current.rotation.y, timeX + scrollOffsetX + targetX, 0.05)
-    groupRef.current.rotation.x = THREE.MathUtils.lerp(groupRef.current.rotation.x, timeY + scrollOffsetY + targetY, 0.05)
+    groupRef.current.rotation.y = THREE.MathUtils.lerp(groupRef.current.rotation.y, timeX + targetX, 0.05)
+    groupRef.current.rotation.x = THREE.MathUtils.lerp(groupRef.current.rotation.x, timeY + targetY, 0.05)
 
     // Animate lines
     if (!linesRef.current) return
