@@ -32,7 +32,7 @@ export default function FAQ() {
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="flex w-full items-center justify-between text-left gap-4 rounded-xl px-4 py-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50 hover:bg-black/5 transition-colors"
                 >
-                  <span id={`faq-label-${i}`} className="font-display text-lg font-bold text-brand-charcoal">{f.q}</span>
+                  <span id={`faq-label-${i}`} className="font-serif text-lg font-normal text-brand-charcoal">{f.q}</span>
                   <div className={`flex items-center justify-center w-8 h-8 rounded-full border transition-colors ${isOpen ? 'border-[#19325a] text-[#19325a] bg-[#19325a]/10' : 'border-black/10 text-brand-charcoal/50 bg-white/50'}`}>
                     <svg
                       className={`h-4 w-4 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
@@ -56,7 +56,7 @@ export default function FAQ() {
                       transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
                       className="overflow-hidden px-4"
                     >
-                      <div className="pt-2 pb-6 text-base leading-relaxed text-brand-charcoal/70">
+                      <div className="pt-2 pb-6 text-base leading-relaxed text-brand-charcoal/65 font-light">
                         {f.a}
                       </div>
                     </motion.dd>

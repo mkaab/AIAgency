@@ -60,7 +60,7 @@ export default function MagneticButton({ children, href, onClick, className }) {
           className
         )}
       >
-        <span className="relative z-10">{children}</span>
+        <span className="relative z-10 inline-flex items-center justify-center gap-2 whitespace-nowrap">{children}</span>
       </Tag>
     </motion.div>
   )

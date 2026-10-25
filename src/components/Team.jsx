@@ -14,11 +14,11 @@ export default function Team() {
             viewport={{ once: true }}
             className="rounded-3xl bg-white/50 backdrop-blur-xl p-8 md:p-12 shadow-2xl shadow-black/[0.04] border border-black/5"
           >
-            <p className="text-lg text-brand-charcoal/80 leading-relaxed">
+            <p className="text-lg text-brand-charcoal/70 leading-[1.75] font-light">
               As the cost of intelligence approaches zero, businesses will need to transition from AI-absent to AI-native if they want to succeed.
               You could drive that transformation from within. Our bet is, you won't. Not because you don't want to. Not because you don't believe it's necessary. But because you're focused on business.
             </p>
-            <ul className="mt-8 space-y-4 text-[15px] text-brand-charcoal/70">
+            <ul className="mt-8 space-y-4 text-[15px] text-brand-charcoal/70 font-light">
               <li className="flex items-start gap-3">
                 <span className="text-[#19325a] shrink-0">✦</span>
                 Track record delivering production AI augmentation with measurable impact.

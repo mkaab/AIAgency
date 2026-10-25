@@ -39,7 +39,7 @@ export default function BlogPost() {
                         <span className="text-gray-400">{post.date}</span>
                     </div>
 
-                    <h1 className="font-display text-4xl md:text-5xl font-bold text-brand-charcoal mb-8 leading-tight">
+                    <h1 className="font-serif text-3xl md:text-5xl font-normal tracking-[-0.015em] text-brand-charcoal mb-8 leading-[1.12]">
                         {post.title}
                     </h1>
 

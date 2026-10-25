@@ -17,8 +17,8 @@ export default function Blog() {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-16"
                 >
-                    <h1 className="font-display text-5xl md:text-6xl font-bold text-brand-charcoal mb-4">Latest Insights</h1>
-                    <p className="text-xl text-brand-charcoal/70 max-w-2xl mx-auto">
+                    <h1 className="font-serif text-5xl md:text-6xl font-normal tracking-[-0.02em] text-brand-charcoal mb-4">Latest Insights</h1>
+                    <p className="text-base md:text-lg text-brand-charcoal/65 font-light leading-[1.7] max-w-2xl mx-auto">
                         Thoughts on AI, automation, and the future of work.
                     </p>
                 </motion.div>
@@ -51,15 +51,15 @@ export default function Blog() {
                                 </div>
                                 <div className="p-6 flex-1 flex flex-col">
                                     <div className="flex items-center gap-3 text-sm mb-3">
-                                        <span className="px-2 py-1 rounded-md bg-brand-blue-600/10 text-brand-blue-600 font-medium">
+                                        <span className="px-2 py-1 rounded-md bg-brand-blue-600/10 text-brand-blue-600 font-medium text-xs">
                                             {blog.category}
                                         </span>
-                                        <span className="text-gray-400">{blog.date}</span>
+                                        <span className="text-gray-400 text-xs font-mono">{blog.date}</span>
                                     </div>
-                                    <h3 className="font-display text-xl font-bold text-brand-charcoal mb-3 group-hover:text-brand-blue-600 transition-colors">
+                                    <h3 className="font-serif text-xl font-normal text-brand-charcoal mb-2 group-hover:text-brand-blue-600 transition-colors">
                                         {blog.title}
                                     </h3>
-                                    <p className="text-gray-600 leading-relaxed flex-1 line-clamp-3">
+                                    <p className="text-gray-500 font-light text-sm leading-relaxed flex-1 line-clamp-3">
                                         {blog.excerpt}
                                     </p>
                                     <div className="mt-6 pt-6 border-t border-gray-100 flex items-center text-brand-blue-600 font-medium group-hover:translate-x-1 transition-transform">

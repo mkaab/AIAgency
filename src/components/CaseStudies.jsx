@@ -75,8 +75,8 @@ export default function CaseStudies() {
                     </div>
                   </div>
                   <div className="p-6 text-center">
-                    <div className="font-display text-xl font-bold text-white">{c.kpi}</div>
-                    <p className="mt-3 text-sm leading-relaxed text-white/70">{c.blurb}</p>
+                    <div className="font-serif text-xl font-normal text-white">{c.kpi}</div>
+                    <p className="mt-3 text-sm leading-relaxed text-white/65 font-light">{c.blurb}</p>
                   </div>
                 </div>
               </motion.div>

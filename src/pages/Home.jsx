@@ -1,5 +1,5 @@
 import Hero from '../components/Hero'
-import About from '../components/About'
+import ProcessComparison from '../components/ProcessComparison'
 import Services from '../components/Services'
 import Stats from '../components/Stats'
 import Team from '../components/Team'
@@ -13,7 +13,7 @@ export default function Home() {
         <>
             <PageReveal />
             <Hero />
-            <About />
+            <ProcessComparison />
             <Services />
             <Stats />
             <Team />

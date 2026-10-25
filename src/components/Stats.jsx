@@ -32,10 +32,10 @@ export default function Stats() {
                 <div className="relative">
                   <div className="absolute -inset-4 rounded-full bg-white/10 blur-xl opacity-50" aria-hidden />
                   <div className="relative inline-flex h-20 w-20 items-center justify-center rounded-full bg-white/10 border border-white/20 shadow-xl shadow-black/20">
-                    <CountUp value={s.value} className="font-display text-2xl font-bold text-white" />
+                    <CountUp value={s.value} className="font-serif text-2xl font-normal text-white" />
                   </div>
                 </div>
-                <div className="text-sm font-bold text-white/70 uppercase tracking-widest">{s.label}</div>
+                <div className="text-xs font-light text-white/75 uppercase tracking-wider">{s.label}</div>
               </motion.div>
             ))}
           </div>

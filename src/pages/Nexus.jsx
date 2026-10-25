@@ -18,21 +18,21 @@ export default function Nexus() {
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6 }}
                         >
-                            <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-sm font-bold text-brand-charcoal bg-white rounded-full border border-black/10 shadow-sm">
-                                <span className="text-[#19325a]">⚡</span> Your First AI Employee
+                            <div className="inline-flex items-center gap-2 px-3.5 py-1 mb-6 text-[11px] font-mono uppercase tracking-[0.14em] text-brand-blue-700 bg-blue-500/8 rounded-full border border-blue-500/20">
+                                <span>⚡</span> Your First AI Employee
                             </div>
-                            <h1 className="font-display text-5xl md:text-7xl font-extrabold text-brand-charcoal mb-6 leading-[1.05] tracking-tight">
-                                Automate support. <span className="text-[#19325a]">Multiply sales.</span>
+                            <h1 className="font-serif text-5xl md:text-[68px] font-normal text-brand-charcoal mb-6 leading-[1.06] tracking-[-0.02em]">
+                                Automate support. <em className="italic font-normal text-[#19325a]">Multiply sales.</em>
                             </h1>
-                            <p className="text-lg text-brand-charcoal/70 mb-8 max-w-lg leading-relaxed">
+                            <p className="text-base md:text-lg text-brand-charcoal/65 mb-8 max-w-lg leading-[1.75] font-light">
                                 Nexus is your all-in-one AI Commerce Employee. Instantly deploy a Shopping Assistant, Support Concierge, and Voice AI rep that work 24/7, driving revenue with zero extra headcount.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
-                                <a href={shopifyAppUrl} target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-[#19325a] text-white text-center rounded-full font-bold hover:bg-[#0c1a2f] transition-all shadow-[0_8px_30px_rgba(25,50,90,0.3)] hover:shadow-[0_12px_40px_rgba(25,50,90,0.4)] flex items-center justify-center gap-2">
-                                    Install on Shopify <span className="text-white/70 text-sm font-normal">(1-Day Free Trial)</span>
+                                <a href={shopifyAppUrl} target="_blank" rel="noopener noreferrer" className="px-8 py-3.5 bg-[#19325a] text-white text-center rounded-full font-medium hover:bg-[#0c1a2f] transition-all shadow-[0_8px_30px_rgba(25,50,90,0.25)] hover:shadow-[0_12px_40px_rgba(25,50,90,0.35)] flex items-center justify-center gap-2 text-[14px]">
+                                    Install on Shopify <span className="text-white/60 text-xs font-light">(1-Day Free Trial)</span>
                                 </a>
-                                <button className="px-8 py-4 bg-white text-[#19325a] text-center rounded-full font-bold border-2 border-[#19325a]/10 hover:border-[#19325a]/30 transition-all flex items-center justify-center gap-2">
-                                    ▶ Watch Demo <span className="text-[#19325a]/70 text-sm font-normal">(1 min)</span>
+                                <button className="px-8 py-3.5 bg-white text-[#19325a] text-center rounded-full font-medium border border-[#19325a]/15 hover:border-[#19325a]/30 transition-all flex items-center justify-center gap-2 text-[14px]">
+                                    ▶ Watch Demo <span className="text-[#19325a]/60 text-xs font-light">(1 min)</span>
                                 </button>
                             </div>
                         </motion.div>
@@ -44,9 +44,9 @@ export default function Nexus() {
                             className="relative flex justify-center"
                         >
                             {/* Floating Sync Badge */}
-                            <div className="absolute -left-6 top-12 z-20 bg-white/90 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl border border-black/5 flex items-center gap-3 animate-bounce" style={{ animationDuration: '3s' }}>
-                                <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse" />
-                                <span className="font-bold text-sm text-brand-charcoal">Live Inventory Synced</span>
+                            <div className="absolute -left-6 top-12 z-20 bg-white/90 backdrop-blur-md px-3.5 py-2 rounded-xl shadow-lg border border-black/5 flex items-center gap-2.5">
+                                <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+                                <span className="font-mono text-xs text-brand-charcoal">Live Inventory Synced</span>
                             </div>
 
                             {/* Live Chat Simulation - Phone Frame */}
@@ -83,11 +83,11 @@ export default function Nexus() {
                                                 </div>
                                                 <div className="p-3">
                                                     <div className="h-32 bg-gray-200 rounded-xl mb-3 flex items-center justify-center text-4xl">🏺</div>
-                                                    <h4 className="font-bold">Minimalist Ceramic Vase</h4>
-                                                    <p className="text-brand-charcoal/60 text-xs mb-2">Matte White • Premium Clay</p>
+                                                    <h4 className="font-medium text-sm">Minimalist Ceramic Vase</h4>
+                                                    <p className="text-brand-charcoal/60 text-xs mb-2 font-light">Matte White • Premium Clay</p>
                                                     <div className="flex justify-between items-center mt-3">
-                                                        <span className="font-bold">$45.00</span>
-                                                        <button className="bg-black text-white px-3 py-1.5 rounded-lg text-xs font-bold">Add to Cart</button>
+                                                        <span className="font-semibold text-sm">$45.00</span>
+                                                        <button className="bg-[#19325a] text-white px-3 py-1.5 rounded-lg text-xs font-medium">Add to Cart</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -109,8 +109,8 @@ export default function Nexus() {
                 <section className="px-6 py-24 bg-white relative">
                     <div className="mx-auto max-w-7xl">
                         <div className="text-center mb-16">
-                            <h2 className="font-display text-4xl md:text-5xl font-extrabold text-brand-charcoal mb-4">Meet Your AI Team</h2>
-                            <p className="text-brand-charcoal/70 max-w-2xl mx-auto text-lg">Specialised, autonomous agents working together to elevate your customer experience.</p>
+                            <h2 className="font-serif text-3xl md:text-5xl font-normal tracking-[-0.015em] text-brand-charcoal mb-3">Meet Your AI Team</h2>
+                            <p className="text-brand-charcoal/60 max-w-2xl mx-auto text-base md:text-lg font-light leading-[1.7]">Specialised, autonomous agents working together to elevate your customer experience.</p>
                         </div>
 
                         <div className="grid lg:grid-cols-3 gap-8">
@@ -118,8 +118,8 @@ export default function Nexus() {
                             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="bg-gray-50 rounded-[2rem] border border-black/5 overflow-hidden flex flex-col">
                                 <div className="p-8 pb-0 flex-1 text-center flex flex-col items-center">
                                     <div className="text-4xl mb-4">🛍️</div>
-                                    <h3 className="font-display text-2xl font-bold mb-3">Shopping Assistant</h3>
-                                    <p className="text-brand-charcoal/70 mb-6">Instantly recommends products, answers sizing questions, and drives conversions directly in the chat.</p>
+                                    <h3 className="font-serif text-2xl font-normal mb-2.5 text-brand-charcoal">Shopping Assistant</h3>
+                                    <p className="text-brand-charcoal/65 font-light text-sm md:text-base leading-[1.65] mb-6">Instantly recommends products, answers sizing questions, and drives conversions directly in the chat.</p>
                                 </div>
                                 <div className="bg-white m-4 mt-0 rounded-2xl border border-black/5 shadow-sm p-4">
                                     <div className="flex gap-2 mb-3 items-end">
@@ -133,11 +133,11 @@ export default function Nexus() {
 
                             {/* Voice AI Rep */}
                             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="bg-[#19325a] text-white rounded-[2rem] overflow-hidden flex flex-col relative shadow-xl">
-                                <div className="absolute top-0 right-0 bg-red-500 text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">The First on Shopify</div>
+                                <div className="absolute top-0 right-0 bg-brand-blue-500 text-white text-[10px] font-mono px-3 py-1 rounded-bl-lg uppercase tracking-wider">The First on Shopify</div>
                                 <div className="p-8 pb-0 flex-1 relative z-10 text-center flex flex-col items-center">
                                     <div className="text-4xl mb-4">📞</div>
-                                    <h3 className="font-display text-2xl font-bold mb-3">Voice AI Rep</h3>
-                                    <p className="text-white/70 mb-6">Let your customers call you. Our native Voice AI answers instantly, checking order status and resolving queries over the phone.</p>
+                                    <h3 className="font-serif text-2xl font-normal mb-2.5">Voice AI Rep</h3>
+                                    <p className="text-white/70 font-light text-sm md:text-base leading-[1.65] mb-6">Let your customers call you. Our native Voice AI answers instantly, checking order status and resolving queries over the phone.</p>
                                 </div>
                                 <div className="bg-black/20 m-4 mt-0 rounded-2xl p-6 flex flex-col items-center justify-center relative z-10 border border-white/10">
                                     <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4 border border-white/20 animate-pulse">
@@ -156,8 +156,8 @@ export default function Nexus() {
                             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="bg-gray-50 rounded-[2rem] border border-black/5 overflow-hidden flex flex-col">
                                 <div className="p-8 pb-0 flex-1 text-center flex flex-col items-center">
                                     <div className="text-4xl mb-4">🎫</div>
-                                    <h3 className="font-display text-2xl font-bold mb-3">Support Concierge</h3>
-                                    <p className="text-brand-charcoal/70 mb-6">Automatically resolves FAQs and seamlessly hands off complex tickets (like refunds) to your human team.</p>
+                                    <h3 className="font-serif text-2xl font-normal mb-2.5 text-brand-charcoal">Support Concierge</h3>
+                                    <p className="text-brand-charcoal/65 font-light text-sm md:text-base leading-[1.65] mb-6">Automatically resolves FAQs and seamlessly hands off complex tickets (like refunds) to your human team.</p>
                                 </div>
                                 <div className="grid grid-cols-2 gap-2 m-4 mt-0">
                                     <div className="bg-white rounded-xl border border-black/5 p-3 flex flex-col justify-between shadow-sm">
@@ -183,17 +183,17 @@ export default function Nexus() {
                     <div className="mx-auto max-w-5xl relative z-10">
                         <div className="grid md:grid-cols-2 gap-12">
                             <div>
-                                <h2 className="font-display text-3xl font-bold mb-4">Live Inventory Sync</h2>
-                                <p className="text-lg text-brand-charcoal/70 mb-6">We read your Shopify catalog in real-time. We never hallucinate prices or sell out-of-stock items. Total peace of mind.</p>
-                                <ul className="space-y-3">
-                                    <li className="flex items-center gap-3"><span className="text-green-500">✓</span> Real-time variant availability</li>
-                                    <li className="flex items-center gap-3"><span className="text-green-500">✓</span> Automatic price syncing</li>
-                                    <li className="flex items-center gap-3"><span className="text-green-500">✓</span> No manual data entry required</li>
+                                <h2 className="font-serif text-3xl font-normal tracking-[-0.015em] text-brand-charcoal mb-3">Live Inventory Sync</h2>
+                                <p className="text-base md:text-lg text-brand-charcoal/65 mb-6 font-light leading-[1.7]">We read your Shopify catalog in real-time. We never hallucinate prices or sell out-of-stock items. Total peace of mind.</p>
+                                <ul className="space-y-3 font-light text-brand-charcoal/80">
+                                    <li className="flex items-center gap-3"><span className="text-emerald-500">✓</span> Real-time variant availability</li>
+                                    <li className="flex items-center gap-3"><span className="text-emerald-500">✓</span> Automatic price syncing</li>
+                                    <li className="flex items-center gap-3"><span className="text-emerald-500">✓</span> No manual data entry required</li>
                                 </ul>
                             </div>
                             <div>
-                                <h2 className="font-display text-3xl font-bold mb-4">Omnichannel Inbox</h2>
-                                <p className="text-lg text-brand-charcoal/70 mb-6">WhatsApp, Instagram, Web, and Voice. Never miss a customer wherever they prefer to chat.</p>
+                                <h2 className="font-serif text-3xl font-normal tracking-[-0.015em] text-brand-charcoal mb-3">Omnichannel Inbox</h2>
+                                <p className="text-base md:text-lg text-brand-charcoal/65 mb-6 font-light leading-[1.7]">WhatsApp, Instagram, Web, and Voice. Never miss a customer wherever they prefer to chat.</p>
                                 <div className="flex gap-4">
                                     <div className="w-12 h-12 bg-white rounded-2xl shadow-sm border border-black/5 flex items-center justify-center text-2xl">📱</div>
                                     <div className="w-12 h-12 bg-white rounded-2xl shadow-sm border border-black/5 flex items-center justify-center text-2xl">📸</div>
@@ -212,26 +212,26 @@ export default function Nexus() {
                     <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-purple-500/40 rounded-full blur-[100px] -translate-y-1/2" />
                     <div className="mx-auto max-w-5xl relative z-10">
                         <div className="text-center mb-16">
-                            <h2 className="font-display text-4xl md:text-5xl font-extrabold mb-4">Transparent, Results-Based Pricing</h2>
-                            <p className="text-white/70 max-w-2xl mx-auto text-lg">You only pay for actual value—sales generated and tickets resolved. Explore our modular plans.</p>
+                            <h2 className="font-serif text-3xl md:text-5xl font-normal tracking-[-0.015em] mb-3">Transparent, Results-Based Pricing</h2>
+                            <p className="text-white/65 max-w-2xl mx-auto text-base md:text-lg font-light leading-[1.7]">You only pay for actual value: sales generated and tickets resolved. Explore our modular plans.</p>
                         </div>
 
                         <div className="grid md:grid-cols-3 gap-6">
                             <Glass variant="regular" params={{ blur: 16 }} className="border border-white/10 rounded-[2rem] p-8 flex flex-col text-center items-center">
-                                <h3 className="font-bold text-xl mb-2">Essential</h3>
-                                <p className="text-sm text-white/60 mb-6 flex-1">Basic text AI and automated support resolution for growing stores.</p>
-                                <a href={shopifyAppUrl} target="_blank" rel="noopener noreferrer" className="block w-full text-center py-3 bg-white/10 hover:bg-white/20 transition-colors rounded-xl font-bold">View Pricing</a>
+                                <h3 className="font-serif text-xl font-normal mb-2">Essential</h3>
+                                <p className="text-sm text-white/60 mb-6 flex-1 font-light">Basic text AI and automated support resolution for growing stores.</p>
+                                <a href={shopifyAppUrl} target="_blank" rel="noopener noreferrer" className="block w-full text-center py-3 bg-white/10 hover:bg-white/20 transition-colors rounded-xl font-medium text-sm">View Pricing</a>
                             </Glass>
                             <Glass variant="clear" params={{ blur: 18 }} className="border border-white/20 rounded-[2rem] p-8 flex flex-col relative transform md:-translate-y-4 shadow-2xl shadow-black/50 text-center items-center">
-                                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#19325a] px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider z-20">Most Popular</div>
-                                <h3 className="font-bold text-xl mb-2">Growth</h3>
-                                <p className="text-sm text-white/60 mb-6 flex-1">Proactive sales, intelligent product recommendations, and omnichannel routing.</p>
-                                <a href={shopifyAppUrl} target="_blank" rel="noopener noreferrer" className="block w-full text-center py-3 bg-white text-[#19325a] hover:bg-gray-100 transition-colors rounded-xl font-bold">View Pricing</a>
+                                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#19325a] px-4 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider z-20">Most Popular</div>
+                                <h3 className="font-serif text-xl font-normal mb-2">Growth</h3>
+                                <p className="text-sm text-white/60 mb-6 flex-1 font-light">Proactive sales, intelligent product recommendations, and omnichannel routing.</p>
+                                <a href={shopifyAppUrl} target="_blank" rel="noopener noreferrer" className="block w-full text-center py-3 bg-white text-[#19325a] hover:bg-gray-100 transition-colors rounded-xl font-medium text-sm">View Pricing</a>
                             </Glass>
                             <Glass variant="regular" params={{ blur: 16 }} className="border border-white/10 rounded-[2rem] p-8 flex flex-col text-center items-center">
-                                <h3 className="font-bold text-xl mb-2">Voice Pro</h3>
-                                <p className="text-sm text-white/60 mb-6 flex-1">The ultimate tier featuring our native, instant Voice AI representative.</p>
-                                <a href={shopifyAppUrl} target="_blank" rel="noopener noreferrer" className="block w-full text-center py-3 bg-white/10 hover:bg-white/20 transition-colors rounded-xl font-bold">View Pricing</a>
+                                <h3 className="font-serif text-xl font-normal mb-2">Voice Pro</h3>
+                                <p className="text-sm text-white/60 mb-6 flex-1 font-light">The ultimate tier featuring our native, instant Voice AI representative.</p>
+                                <a href={shopifyAppUrl} target="_blank" rel="noopener noreferrer" className="block w-full text-center py-3 bg-white/10 hover:bg-white/20 transition-colors rounded-xl font-medium text-sm">View Pricing</a>
                             </Glass>
                         </div>
                     </div>
@@ -241,8 +241,8 @@ export default function Nexus() {
                 <section id="demo" className="px-6 py-32 relative">
                     <div className="mx-auto max-w-3xl">
                         <div className="text-center mb-16">
-                            <h2 className="font-display text-4xl font-extrabold text-brand-charcoal mb-4">Enterprise Customization</h2>
-                            <p className="text-brand-charcoal/70">Need bespoke workflows, ERP integrations, or a custom LLM fine-tuned on your brand voice? Book a consultation.</p>
+                            <h2 className="font-serif text-3xl md:text-4xl font-normal tracking-[-0.015em] text-brand-charcoal mb-3">Enterprise Customization</h2>
+                            <p className="text-brand-charcoal/65 font-light text-base md:text-lg">Need bespoke workflows, ERP integrations, or a custom LLM fine-tuned on your brand voice? Book a consultation.</p>
                         </div>
 
                         <div className="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl shadow-black/[0.04] border border-black/5 p-8 md:p-12 relative overflow-hidden">
@@ -251,29 +251,29 @@ export default function Nexus() {
                             <form onSubmit={submit} className="grid gap-6">
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div>
-                                        <label className="block text-sm font-bold text-brand-charcoal/90 mb-2 uppercase tracking-wide">First Name</label>
-                                        <input required name="first_name" className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-[#19325a]/20 text-brand-charcoal focus:ring-2 focus:ring-[#19325a]/20 focus:border-[#19325a]/50 outline-none transition-all" />
+                                        <label className="block text-xs font-medium text-brand-charcoal/70 mb-2 uppercase tracking-wider">First Name</label>
+                                        <input required name="first_name" className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-[#19325a]/20 text-brand-charcoal focus:ring-2 focus:ring-[#19325a]/20 focus:border-[#19325a]/50 outline-none transition-all font-light" />
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-bold text-brand-charcoal/90 mb-2 uppercase tracking-wide">Last Name</label>
-                                        <input required name="last_name" className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-[#19325a]/20 text-brand-charcoal focus:ring-2 focus:ring-[#19325a]/20 focus:border-[#19325a]/50 outline-none transition-all" />
+                                        <label className="block text-xs font-medium text-brand-charcoal/70 mb-2 uppercase tracking-wider">Last Name</label>
+                                        <input required name="last_name" className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-[#19325a]/20 text-brand-charcoal focus:ring-2 focus:ring-[#19325a]/20 focus:border-[#19325a]/50 outline-none transition-all font-light" />
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label className="block text-sm font-bold text-brand-charcoal/90 mb-2 uppercase tracking-wide">Work Email</label>
-                                    <input required type="email" name="email" className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-[#19325a]/20 text-brand-charcoal focus:ring-2 focus:ring-[#19325a]/20 focus:border-[#19325a]/50 outline-none transition-all" />
+                                    <label className="block text-xs font-medium text-brand-charcoal/70 mb-2 uppercase tracking-wider">Work Email</label>
+                                    <input required type="email" name="email" className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-[#19325a]/20 text-brand-charcoal focus:ring-2 focus:ring-[#19325a]/20 focus:border-[#19325a]/50 outline-none transition-all font-light" />
                                 </div>
 
                                 <div>
-                                    <label className="block text-sm font-bold text-brand-charcoal/90 mb-2 uppercase tracking-wide">Company Name</label>
-                                    <input required name="company" className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-[#19325a]/20 text-brand-charcoal focus:ring-2 focus:ring-[#19325a]/20 focus:border-[#19325a]/50 outline-none transition-all" />
+                                    <label className="block text-xs font-medium text-brand-charcoal/70 mb-2 uppercase tracking-wider">Company Name</label>
+                                    <input required name="company" className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-[#19325a]/20 text-brand-charcoal focus:ring-2 focus:ring-[#19325a]/20 focus:border-[#19325a]/50 outline-none transition-all font-light" />
                                 </div>
 
                                 <button
                                     type="submit"
                                     disabled={state.submitting}
-                                    className="w-full py-4 bg-[#19325a] text-white rounded-xl font-bold text-lg hover:bg-black transition-colors shadow-md disabled:opacity-70 mt-4"
+                                    className="w-full py-4 bg-[#19325a] text-white rounded-xl font-medium text-base hover:bg-[#0c1a2f] transition-all shadow-md disabled:opacity-70 mt-4 tracking-wide"
                                 >
                                     {state.submitting ? 'Sending Request...' : 'Book Enterprise Demo'}
                                 </button>

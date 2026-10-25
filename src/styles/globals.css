@@ -39,6 +39,7 @@ body {
   background-color: var(--bg);
   font-size: 17px;
   /* Increased from default 16px */
+  font-weight: 300;
   line-height: 1.75;
   /* Improved from 1.6 */
   -webkit-font-smoothing: antialiased;
@@ -59,8 +60,10 @@ body {
 h1,
 h2,
 h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 400;
   letter-spacing: -0.02em;
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 /* Improved from 1.15 */
@@ -110,9 +113,10 @@ section {
 .prose h2,
 .prose h3,
 .prose h4 {
-  font-family: 'Space Grotesk', sans-serif;
-  color: #333333;
-  font-weight: 700;
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #19325a;
+  font-weight: 400;
+  letter-spacing: -0.015em;
 }
 
 .prose h2 {

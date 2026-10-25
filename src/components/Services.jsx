@@ -64,8 +64,8 @@ export default function Services() {
                   <div className="mx-auto h-14 w-14 rounded-2xl bg-[#19325a]/10 flex items-center justify-center text-[#19325a] font-semibold shadow-inner border border-[#19325a]/20">
                     {s.icon}
                   </div>
-                  <div className="mt-6 text-2xl font-bold text-brand-charcoal font-display">{s.title}</div>
-                  <p className="mt-4 text-[15px] leading-relaxed text-brand-charcoal/70">{s.desc}</p>
+                  <div className="mt-6 text-2xl font-normal text-brand-charcoal font-serif">{s.title}</div>
+                  <p className="mt-3 text-[15px] leading-[1.7] text-brand-charcoal/65 font-light">{s.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -86,8 +86,8 @@ export default function Services() {
                   <div className="mx-auto h-14 w-14 rounded-2xl bg-[#19325a]/10 flex items-center justify-center text-[#19325a] font-semibold shadow-inner border border-[#19325a]/20">
                     {s.icon}
                   </div>
-                  <div className="mt-6 text-2xl font-bold text-brand-charcoal font-display">{s.title}</div>
-                  <p className="mt-4 text-base leading-relaxed text-brand-charcoal/70">{s.desc}</p>
+                  <div className="mt-6 text-2xl font-normal text-brand-charcoal font-serif">{s.title}</div>
+                  <p className="mt-3 text-base leading-[1.7] text-brand-charcoal/65 font-light">{s.desc}</p>
                 </div>
               </motion.div>
             ))}
